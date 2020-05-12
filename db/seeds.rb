@@ -8,9 +8,13 @@
 
 10.times do
   title = Faker::Book.title
-  content = Faker::Movie.quote
+  content = Faker::Hipster.sentence
   Article.create(
     title: title,
     content: content
   )
 end
+
+# seed: db:seed
+# start new and seed: rails db:drop db:create db:migrate db:seed
+# warning: above command will delete ALL current items in database
